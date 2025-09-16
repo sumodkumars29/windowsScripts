@@ -1,0 +1,85 @@
+	git init -b main
+
+git status
+
+git add .
+
+git commit -m "message"
+
+git commit -a -m "message"
+
+
+ssh-keygen -t ed25519 -C "your_email@example.com"
+
+
+HTTPS - git remote add origin https://github.com/sumodkumars29/windowsTerminal.git
+
+SSH - git remote add origin git@github.com:sumodkumars29/windowsTerminal.git
+
+C:\myScripts>git remote -v
+origin  git@github.com:sumodkumars29/windowsTerminal.git (fetch)
+origin  git@github.com:sumodkumars29/windowsTerminal.git (push)
+
+git remote remove origin
+
+
+git push -u origin main
+
+
+*****************************************************************
+The default branch has been renamed!
+master is now named main
+
+If you have a local clone, you can update it by running the following commands.
+
+git branch -m master main
+git fetch origin
+git branch -u origin/main main
+git remote set-head origin -a
+*****************************************************************
+
+To update a new git directory to an existing git repo
+Option 1:Allow unrelated histories (Most common)
+		git pull origin main --allow-unrelated-histories
+		
+Option 2: If you want to keep your local history as primary (Recommended)
+	
+	# Fetch the remote changes
+		git fetch origin
+
+	# Merge allowing unrelated histories
+		git merge origin/main --allow-unrelated-histories
+
+	# Resolve any conflicts, then add and commit
+		git add .
+		git commit -m "Merge unrelated histories"
+
+	# Push to remote
+		git push -u origin main
+
+Option 3: If you want to overwrite remote with your local content
+
+	# Force push your local branch to overwrite remote
+		git push -u origin main --force
+
+Option 4: If you want to start fresh (discard remote content)
+
+	# Fetch remote changes
+		git fetch origin
+
+	# Reset your branch to match remote (will lose local changes)
+		git reset --hard origin/main
+
+	# Then pull any remaining changes
+		git pull origin main
+	
+
+
+
+
+
+
+
+
+
+

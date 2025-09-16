@@ -1,0 +1,17 @@
+To delete a file 		:				del C:\path\to\file.txt
+	→ deletes the specific file named at the path given.
+
+To delete multiple files 	:				del *.txt
+	→ deletes all .txt files in the current folder.
+
+Delete without asking for confirmation : 			del /f /q C:\path\to\file.txt
+	→ /f = force delete (even read-only)
+	→ /q = quiet (no confirmation)
+
+Delete a folder (and everything inside) :			rmdir /s /q C:\path\to\folder
+								rd /s /q C:\path\to\folder
+	/s = delete all files/subfolders inside
+	/q = quiet
+
+To delete an empty directory :					rmdir C:\path\to\emptydir
+								rd C:\path\to\emptydir

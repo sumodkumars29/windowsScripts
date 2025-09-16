@@ -1,0 +1,1 @@
+wmic path Win32_VideoController get CurrentHorizontalResolution,CurrentVerticalResolution

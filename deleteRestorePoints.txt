@@ -1,5 +1,0 @@
-# In admin mode
-
-vssadmin list shadows
-
-vssadmin delete shadows /shadow={shadow-copy-id}

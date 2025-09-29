@@ -1,4 +1,4 @@
 @echo off
-start "" "C:\Program Files\GIMP 2\bin\gimp-2.10.exe" %*
+start "" "C:\Users\S10DIGITAL\AppData\Local\Programs\GIMP 3\bin\gimp-3.exe" %*
 
 :: syntax ==> start "windowTitle" "[command/program]" [arguments]

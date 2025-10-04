@@ -27,6 +27,7 @@ set "COUNT=%~1"
 set "DOWNLOADS=%USERPROFILE%\Downloads"
 :: %USERPROFILE% → environment variable pointing to the current user’s home directory
 set "TARGET=%DOWNLOADS%\Pictures"
+set "OUTFOLDER=%DOWNLOADS%\Pictures_out"
 
 :: if Pictures\ already exists, clear it out
 if exist "%TARGET%" (
@@ -42,6 +43,16 @@ if exist "%TARGET%" (
 	:: >nul 2>&1 → redirects output (>nul) and errors (2>&1) to nowhere — keeps console clean.
 :: Else, mkdir "%TARGET%" → makes the folder.
 :: Note: del deletes files only, not subfolders. Subfolders would need rmdir /s /q.
+
+:: if Pictures_out\ already exists, clear it out
+:: We are creating this folder now so that GIMP has a target folder ready
+if exist "%OUTFOLDER%" (
+	echo Deleting existing images in Pictures_out\ ...
+	del /q "%OUTFOLDER%\*" >nul 2>&1
+) else (
+	mkdir "%OUTFOLDER%"
+)
+
 
 
 :: reset counter

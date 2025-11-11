@@ -60,6 +60,7 @@ set /a CNT=0
 :: set /a → sets a variable using arithmetic.
 
 :: newest files first, only files (no dirs)
+set "MOVEFAIL=0"
 for /f "delims=" %%A in ('
 	dir /b /a:-d /o:-d "%DOWNLOADS%"
 ') do (
@@ -67,8 +68,11 @@ for /f "delims=" %%A in ('
 	if !CNT! leq %COUNT% (
 		set "EXT=%%~xA"
 		move "%DOWNLOADS%\%%A" "%TARGET%\Pic!CNT!!EXT!" >nul
+        if errorlevel 1 set "MOVEFAIL=1"
 	)
 )
+
+
 
 :: for /f "delims=" %%A in (' command ') do (...)
 	:: /f → reads output of a command line by line.

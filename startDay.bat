@@ -4,8 +4,8 @@
 :: Suppress command output
 :: Launch Chrome with specific profiles and tabs
 
-start "" chrome --profile-directory="Profile 1" https://www.gmail.com https://web.whatsapp.com
-start "" chrome --profile-directory="Profile 2" https://web.whatsapp.com https://www.youtube.com
+start "" "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe" --profile-directory="Profile 2" https://www.gmail.com https://web.whatsapp.com
+start "" "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe" --profile-directory="Default" https://web.whatsapp.com https://www.youtube.com
 
 :: Launch Excel with the specified workbook
 start "" excel "%USERPROFILE%\Desktop\Sales Tracker.xlsm"
